@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# React Coding Challenge
+
+This project uses [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/)
 
 ## Available Scripts
 
@@ -27,18 +29,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## TODO
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The skeleton app uses test data but should use real data from https://jsonplaceholder.typicode.com/posts. The store is already configured and has a `posts` slice. It uses [Redux Toolkit](https://redux-toolkit.js.org/), which includes [Redux Thunk](https://github.com/reduxjs/redux-thunk) middleware, so [createAsyncThunk](https://redux-toolkit.js.org/api/createAsyncThunk) can be used to create an action that loads the data. It should be dispatched when the `Posts` component mounts. When loading the `isLoading` state should be set to true then reset to false when the request succeeds.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can load the data any way you like, for example using the `fetch` API or a library like [Axios](https://github.com/axios/axios).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The skeleton app uses [React Router](https://reactrouter.com/web/guides/quick-start) for displaying the relevant component for the current URL and linking between the posts list and the post page.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+There are also other TODOs dotted around the code that need sorting.
