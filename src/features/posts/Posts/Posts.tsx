@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { PostBody } from '../PostBody/PostBody';
 
 export interface PostsProps {}
 
@@ -42,6 +43,7 @@ export const Posts: React.FC<PostsProps> = () => {
       {posts.map((post) => (
         <li key={post.id}>
           <Link to={`/posts/${post.id}`}>{post.title}</Link>
+          <PostBody summary text={post.body} />
         </li>
       ))}
     </ul>

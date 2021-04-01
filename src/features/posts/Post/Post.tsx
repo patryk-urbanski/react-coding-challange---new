@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
 
+import { PostBody } from '../PostBody/PostBody';
+
 export interface PostProps {}
 
 export const Post: React.FC<PostProps> = () => {
@@ -19,7 +21,7 @@ export const Post: React.FC<PostProps> = () => {
   return (
     <div>
       <h2>{post.title}</h2>
-      <pre>{post.body}</pre>
+      <PostBody text={post.body} />
     </div>
   );
 };
