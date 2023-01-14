@@ -1,12 +1,19 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import {
+  configureStore,
+  ThunkAction,
+  Action,
+  getDefaultMiddleware,
+} from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
 
 // TODO: These relative paths are bad.
-import postsReducer from '../features/posts/postsSlice';
+import postsReducer from 'features/posts/postsSlice';
 
 export const store = configureStore({
   reducer: {
     posts: postsReducer,
   },
+  middleware: [...getDefaultMiddleware(), thunk],
 });
 
 export type RootState = ReturnType<typeof store.getState>;
